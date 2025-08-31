@@ -19,13 +19,17 @@ graph TD
     ThreadPool --> Thread3[...]
     ThreadPool --> Thread8[Thread 8]
     
-    Thread1 --> Handler[RequestHandler]
-    Thread2 --> Handler
-    Thread8 --> Handler
+    Thread1 --> Handler1[RequestHandler]
+    Thread2 --> Handler2[RequestHandler]
+    Thread8 --> Handler8[RequestHandler]
     
-    Handler --> Response[ResponseGenerator]
+    Handler1 --> Response1[ResponseGenerator]
+    Handler2 --> Response2[ResponseGenerator]
+    Handler8 --> Response8[ResponseGenerator]
     
-    Response --> ClientResponse[Client Responses]
+    Response1 --> ClientResponse1[Response]
+    Response2 --> ClientResponse2[Response]
+    Response8 --> ClientResponse8[Response]
 ```
 
 ## Available Routes
