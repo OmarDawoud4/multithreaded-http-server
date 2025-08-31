@@ -10,12 +10,22 @@ A simple, multi-threaded HTTP server implementation in Java that demonstrates ba
 Architecture
 ```mermaid
 graph TD
-    A[Client Request] --> B[HttpServer :8080]
-    B --> C[Thread Pool]
-    C --> D[RequestHandler]
-    D --> E[ResponseGenerator]
-    E --> F[HTTP Response]
-    F --> A
+    Clients[Client Requests] --> ServerSocket[Server Socket]
+    
+    ServerSocket --> ThreadPool[Thread Pool]
+    
+    ThreadPool --> Thread1[Thread 1]
+    ThreadPool --> Thread2[Thread 2]
+    ThreadPool --> Thread3[...]
+    ThreadPool --> Thread8[Thread 8]
+    
+    Thread1 --> Handler[RequestHandler]
+    Thread2 --> Handler
+    Thread8 --> Handler
+    
+    Handler --> Response[ResponseGenerator]
+    
+    Response --> ClientResponse[Client Responses]
 ```
 
 ## Available Routes
