@@ -38,15 +38,15 @@ graph TD
 - **/random** : Generates a random number (1-100)
 - **/stats** : Displays server statistics
 - **Other routes** :Returns 404 Not Found
-How to Run
-Compile the Java files:
+## How to Run
+- Compile the Java files:
 ```bash
 javac HttpServer.java RequestHandler.java ResponseGenerator.java
 ```
-Run the server:
+- Run the server:
 ```bash
 java HttpServer
 ```
-Access the server:
+- Access the server:
 Open your browser and navigate to http://localhost:8080
 
