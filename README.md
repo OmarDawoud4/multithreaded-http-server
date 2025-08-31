@@ -1,11 +1,11 @@
-Java HTTP Server
+# Java HTTP Server
 A simple, multi-threaded HTTP server implementation in Java that demonstrates basic web server concepts including request handling, routing, and concurrent client connections.
-Features
+## Features
 
-Multi-threaded: Uses a thread pool with 8 threads to handle concurrent client connections
-Basic Routing: Supports multiple endpoints with different content
-HTTP/1.1 Compatible: Implements basic HTTP protocol standards
-Lightweight: No external dependencies, uses only Java standard library
+- **Multi-threaded**: Uses a thread pool with 8 threads to handle concurrent client connections
+- **Basic Routing**: Supports multiple endpoints with different content
+- **HTTP/1.1 Compatible**: Implements basic HTTP protocol standards
+- **Lightweight**: No external dependencies, uses only Java standard library
 
 Architecture
 ```mermaid
@@ -18,8 +18,12 @@ graph TD
     F --> A
 ```
 
-Available Routes
-RouteDescription/Home page with navigation links/aboutInformation about the server/randomGenerates a random number (1-100)/statsDisplays server statisticsOther routesReturns 404 Not Found
+## Available Routes
+- **/** : Home page with navigation links
+- **/about** : Information about the server
+- **/random** : Generates a random number (1-100)
+- **/stats** : Displays server statistics
+- **Other routes** :Returns 404 Not Found
 How to Run
 Compile the Java files:
 ```bash
